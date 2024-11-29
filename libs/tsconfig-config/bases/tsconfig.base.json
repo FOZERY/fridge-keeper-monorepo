@@ -1,0 +1,28 @@
+{	
+	"display": "Base tsconfig",
+	"compilerOptions": {
+	  "target": "ES2021",
+	  "module": "CommonJS",	
+	  "moduleResolution": "node",
+	  "strict": true,
+	  "allowJs": true,
+      "alwaysStrict": true,
+	  "preserveConstEnums": false,
+	  "incremental": true,
+	  "declaration": true,
+	  "declarationMap": true,
+	  "removeComments":true,
+	  "sourceMap": true,
+	  "esModuleInterop": true,
+	  "allowSyntheticDefaultImports": true,
+	  "skipLibCheck": true,
+	  "forceConsistentCasingInFileNames": true,
+	  "noImplicitAny": true,
+	  "noImplicitReturns": true,
+	  "noImplicitThis": true,
+	  "noUnusedLocals": true,
+	  "noUnusedParameters": true,
+	  "allowUnreachableCode": false,
+	  "noFallthroughCasesInSwitch": true
+	},	
+  }	

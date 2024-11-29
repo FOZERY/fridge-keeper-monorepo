@@ -1,0 +1,26 @@
+{	
+	"display": "tsconfig for libs",
+	"compilerOptions": {
+	  "target": "ES2021",
+	  "module": "ES2020",		
+	  "moduleResolution": "node",
+	  "strict": true,
+      "alwaysStrict": true,
+	  "preserveConstEnums": false,	
+	  "declaration": true,
+	  "declarationMap": true,
+	  "sourceMap": true,
+	  "removeComments":true,
+	  "esModuleInterop": true,
+	  "allowSyntheticDefaultImports": true,
+	  "skipLibCheck": true,
+	  "forceConsistentCasingInFileNames": true,
+	  "noImplicitAny": true,
+	  "noImplicitReturns": true,
+	  "noImplicitThis": true,
+	  "noUnusedLocals": true,
+	  "noUnusedParameters": true,
+	  "allowUnreachableCode": false,
+	  "noFallthroughCasesInSwitch": true
+	},	
+}				

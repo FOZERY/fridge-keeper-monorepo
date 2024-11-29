@@ -6,41 +6,13 @@ services:
         ports:
             - "27017:27017"
         environment:
-            MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
-            MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+            - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME} # root пользователь
+            - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD} # пароль для root
+            - MONGO_INITDB_DATABASE=${MONGO_INITDB_DATABASE} # создается эта база данных
+            - MONGO_INITDB_USER=${MONGO_INITDB_USER} # пользователь для базы данных
+            - MONGO_INITDB_PASSWORD=${MONGO_INITDB_PASSWORD} # пароль для пользователя
         volumes:
             - mongodb_volume:/data/db
-        healthcheck:
-            test:
-                [
-                    "CMD",
-                    "mongo",
-                    "--username",
-                    "${MONGO_INITDB_ROOT_USERNAME}",
-                    "--password",
-                    "${MONGO_INITDB_ROOT_PASSWORD}",
-                    "--eval",
-                    "db.runCommand('ping').ok",
-                ]
-            interval: 10s
-            timeout: 5s
-            retries: 3
-            start_period: 15s
-
-    mongo-express:
-        image: mongo-express:1.0.2
-        container_name: mongo-express
-        depends_on:
-            mongodb:
-                condition: service_started
-        restart: unless-stopped
-        ports:
-            - 8081:8081
-        environment:
-            ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGO_INITDB_ROOT_USERNAME}
-            ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
-            ME_CONFIG_MONGODB_URL: mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@mongodb:27017/
-            ME_CONFIG_BASICAUTH: false
 
 volumes:
-    mongodb_volume:
+    mongodb_volume: 

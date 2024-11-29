@@ -1,0 +1,16 @@
+{
+	"name": "@libs/tsconfig-config",
+	"version": "1.0.0",
+	"description": "sharable tsconfigs for apps and libs",
+	"private": true,
+	"main": "base/tsconfig.base.json",
+	"files": [	
+		"bases/tsconfig.base.json",
+		"bases/tsconfig.lib.json"
+	],
+	"author": "",
+	"peerDependencies": {
+		"typescript": "^5.6.3"
+	},
+	"license": "ISC"
+}

@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"declaration": true,
+		"removeComments": true,
+		"emitDecoratorMetadata": true,	
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"target": "ES2021",
+		"sourceMap": true,
+		"outDir": "./dist",	
+		"incremental": true,
+		"skipLibCheck": true,
+		"strict": true,	
+		"noImplicitAny": true,		
+		"noFallthroughCasesInSwitch": true,
+		"types": ["node", "jest"]	
+	},						
+	"include": ["src", "test", "eslint.config.mjs"],	
+	"exclude": ["node_modules"," dist"]
+}  
+	

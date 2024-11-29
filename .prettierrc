@@ -4,6 +4,6 @@
 	"trailingComma": "es5",
 	"endOfLine": "auto",
 	"semi": true,
-	"singleQuote": false,
+	"singleQuote": false,	
 	"printWidth": 100
-} 
+}

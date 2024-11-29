@@ -1,25 +1,41 @@
 {
-  "name": "fridge-keeper-app",
-  "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@eslint/js": "^9.15.0",
-    "@types/node": "^22.9.0",
-    "eslint": "^9.0.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "globals": "^15.12.0",
-    "prettier": "^3.3.3",
-    "typescript": "^5.6.3",
-    "typescript-eslint": "^8.14.0"
-  }
+	"name": "fridge-keeper-app",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"build": "pnpm -r run build",
+		"build:libs": "pnpm -r --filter=./libs/* run build",
+		"lint": "eslint",
+		"format": "prettier --write ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@eslint/js": "^9.15.0",
+		"eslint": "^9.0.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"globals": "^15.12.0",
+		"prettier": "^3.3.3",
+		"typescript-eslint": "^8.15.0",
+		"typescript": "5.6.3"
+	},
+	"dependencies": {
+		"rimraf": "^6.0.1"
+	},
+	"pnpm": {
+		"overrides": {	
+			"typescript": "5.6.3",
+			"@eslint/js": "^9.15.0",
+			"eslint": "^9.0.0",
+			"eslint-config-prettier": "^9.1.0",
+			"eslint-plugin-prettier": "^5.2.1",
+			"globals": "^15.12.0",
+			"prettier": "^3.3.3",
+			"typescript-eslint": "^8.15.0"
+			}
+	}
 }

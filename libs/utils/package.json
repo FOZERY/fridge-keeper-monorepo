@@ -1,0 +1,22 @@
+{
+  "name": "@libs/utils",
+  "private": true,
+  "version": "1.0.0", 
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "pnpm run clean && tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@libs/tsconfig-config": "workspace:*",
+    "@types/node": "^20.3.1"
+  },
+  "peerDependencies": {
+		"typescript": "^5.6.3"
+	}
+}
+  
